@@ -1,11 +1,18 @@
 import sys
+import inspect
 
 from peewee import *
-
+import peewee
 from models import *
 
 if __name__ == '__main__':
+
     database.init('smart-city')
+
+    tables = {Citizen, CitizenAccount, Transportation, Car, PublicCar, Station, History, Parking, ParkingReceipt,
+                            Home, Path, Trip, TripReceipt, UrbanService, UrbanServiceReceipt}
+    if len(database.get_tables()) == 0:
+        database.create_tables(tables)
 
     try:
         command = sys.argv[1]
@@ -20,8 +27,8 @@ if __name__ == '__main__':
             print(f'Created object {obj} successfully')
         except IntegrityError as ie:
             print(ie)
-        except Exception:
-            print('Invalid command')
+        except Exception as e:
+            print(f'Invalid command: {e}')
 
     elif command.startswith('delete'):
         try:

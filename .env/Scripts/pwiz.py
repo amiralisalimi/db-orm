@@ -1,4 +1,4 @@
-#!C:\Users\Asus\Documents\Sharif\DB\Project\orm\.env\Scripts\python.exe
+#!C:\Users\Nik\Desktop\db-pr\db-orm\.env\Scripts\python.exe
 
 import datetime
 import os

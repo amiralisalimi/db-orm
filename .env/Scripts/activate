@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Asus\Documents\Sharif\DB\Project\orm\.env"
+VIRTUAL_ENV="C:\Users\Nik\Desktop\db-pr\db-orm\.env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
